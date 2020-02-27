@@ -20,7 +20,7 @@ def won?(board)
   in_a_row_o = 0
   WIN_COMBINATIONS.each do |possibility|
     possibility.each do |spot|
-      if board[spot] == "X" 
+      if board[spot] == "X"
         in_a_row_x += 1
       elsif board[spot] == "O"
         in_a_row_o += 1
