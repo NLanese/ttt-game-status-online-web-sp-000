@@ -35,13 +35,13 @@ def won?(board)
     end #ends looking for O
     if (allX || allO)
       return true
-    else 
+    else
       current_array = []
       count += 1
     end # ends win or continue
   end # ends the until loop
-  return false 
-end 
+  return false
+end
 
 
 def full?(board)
