@@ -22,21 +22,23 @@ def won?(board)
   count = 0
   xCount = 0
   oCount = 0
-  WIN_COMBINATIONS[count].each do | space |
-    if board[space] == "X"
-      xCount += 1
-    elsif board[space] == "O"
-      oCount += 1
+  until count > 8
+    WIN_COMBINATIONS[count].each do | space |
+      if board[space] == "X"
+        xCount += 1
+      elsif board[space] == "O"
+        oCount += 1
+      end
+      if (oCount == 3 || xCount == 3)
+        return WIN_COMBINATIONS[count]
+      else
+        oCount = 0
+        xCount = 0
+        count += 1
+      end
     end
-    if (oCount == 3 || xCount == 3)
-      return WIN_COMBINATIONS[count]
-    else
-      oCount = 0
-      xCount = 0
-      count += 1
-    end
+    return false
   end
-  return false
 end
 
 
