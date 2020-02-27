@@ -16,8 +16,6 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  in_a_row_x = 0
-  in_a_row_o = 0
   WIN_COMBINATIONS.each do |possibility|
     possibility.each do |spot|
       if board[spot] == "X"
