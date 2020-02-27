@@ -29,7 +29,7 @@ def won?(board)
       oCount += 1
     end
     if (oCount == 3 || xCount == 3)
-      return true
+      return WIN_COMBINATIONS[count]
     else
       oCount = 0
       xCount = 0
