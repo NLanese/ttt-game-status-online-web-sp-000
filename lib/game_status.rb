@@ -23,7 +23,7 @@ def won?(board)
   xCount = 0
   oCount = 0
   current_array = []
-  until count > 8
+  until count >= 8
     winTest = WIN_COMBINATIONS[count]
     winTest.each do | space |
       current_array << board[space]
