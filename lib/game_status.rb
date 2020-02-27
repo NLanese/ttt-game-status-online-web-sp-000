@@ -37,8 +37,8 @@ def won?(board)
         count += 1
       end
     end
-    return false
   end
+  return false
 end
 
 
