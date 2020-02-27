@@ -24,7 +24,8 @@ def won?(board)
   oCount = 0
   current_array = []
   until count > 8
-    WIN_COMBINATIONS[count].each do | space |
+    winTest = WIN_COMBINATIONS[count]
+    winTest.each do | space |
       current_array << board[space]
     end #ends the each loop, makes a new array of what was in the winning spots
     allX = current_array.all? do |character|
