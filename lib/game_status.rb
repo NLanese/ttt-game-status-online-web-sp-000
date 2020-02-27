@@ -35,7 +35,7 @@ def won?(board)
       character == "O"
     end #ends looking for O
     if (allX || allO)
-      return true
+      return winTest
     else
       current_array = []
       count += 1
