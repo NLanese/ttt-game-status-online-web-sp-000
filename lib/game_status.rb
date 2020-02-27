@@ -41,7 +41,7 @@ def won?(board)
       count += 1
     end # ends win or continue
   end # ends the until loop
-  return false
+  return nil
 end
 
 
@@ -71,3 +71,14 @@ def over?(board)
     return false
   end
 end
+
+
+def winner(board)
+  winning_array = win?(board)
+  if winning_array == nil 
+    return nil
+  end
+  space = winning_array[0]
+  return board[space]
+end
+
