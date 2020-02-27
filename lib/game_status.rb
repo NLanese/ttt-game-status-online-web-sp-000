@@ -33,6 +33,7 @@ def won?(board){
       else
         xCount = 0
         oCount = 0
+        counter += 1
       }
     }
 }
