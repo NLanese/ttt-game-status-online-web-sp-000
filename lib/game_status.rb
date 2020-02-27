@@ -21,7 +21,7 @@ def won?(board)
   count = 0
   xCount = 0
   oCount = 0
-  WIN_COMBINATIONS[counter].each do | space |
+  WIN_COMBINATIONS[count].each do | space |
     if board[space] == "X"
       xCount += 1
     elsif board[space] == "O"
@@ -32,7 +32,7 @@ def won?(board)
     else
       oCount = 0
       xCount = 0
-      counter += 1
+      count += 1
     end
   end
   return false
