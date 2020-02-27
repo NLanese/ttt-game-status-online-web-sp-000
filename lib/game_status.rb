@@ -22,7 +22,7 @@ def won?(board)
   xCount = 0
   oCount - 0
   until counter == 8
-    WIN_COMBINATIONS[counter].each do | spot | 
+    WIN_COMBINATIONS[counter].each do | spot |
       if (board[spot] == "X")
         xCount += 1
       elsif (board[spot] == "O")
@@ -38,8 +38,8 @@ def won?(board)
     end
   end
 end
-      
-    
+
+
 
 
 
