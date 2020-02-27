@@ -16,3 +16,18 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
+  in_a_row_x = 0
+  in_a_row_o = 0
+  WIN_COMBINATIONS.each do |possibility|
+    possibility.each do |spot|
+      if board[spot] == "X" 
+        in_a_row_x += 1
+      elsif board[spot] == "O"
+        in_a_row_o += 1
+      end
+      if (in_a_row_o == 3 || in_a_row_x == 3)
+        return true
+      end
+    end
+  end
+end
