@@ -25,7 +25,7 @@ def won?(board)
     if board[space] == "X"
       xCount += 1
     elsif board[space] == "O"
-      oCount += 1      
+      oCount += 1
     end
     if (oCount == 3 || xCount == 3)
       return true
