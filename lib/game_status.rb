@@ -19,8 +19,22 @@ WIN_COMBINATIONS = [
 
 def won?(board){
   counter = 0
+  xCount = 0
+  oCount - 0
   until counter == 8
-
+    WIN_COMBINATIONS[counter].each do | spot | {
+      if (board[spot] == "X"){
+        xCount += 1
+      elsif (board[spot] == "O")
+        oCount += 1
+      }
+      if (xCount == 3 || oCount == 3){
+        return true
+      else
+        xCount = 0
+        oCount = 0
+      }
+    }
 }
 
 
