@@ -26,21 +26,22 @@ def won?(board)
   until count > 8
     WIN_COMBINATIONS[count].each do | space |
       current_array << board[space]
-    end
+    end #ends the each loop, makes a new array of what was in the winning spots
     allX = current_array.all? do |character|
       character == "X"
-    end
+    end #ends looking for X
     allO = current_array.all? do |character|
       character == "O"
-    end
+    end #ends looking for O
     if (allX || allO)
       return true
-    else
+    else 
       current_array = []
       count += 1
-  end
-  return false
-end
+    end # ends win or continue
+  end # ends the until loop
+  return false 
+end 
 
 
 def full?(board)
